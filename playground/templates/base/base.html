@@ -1,0 +1,52 @@
+{% load static %}   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'registerStyles/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% if title %}
+    <a style="color: #FFF" href="{% url 'homePage' %}"><h2 class="header">{{ title}}</h2></a>
+    <form id="form" action="">
+
+        
+        <h1 id="inserter">{% block pageHeadTitle%}Page{% endblock %}</h1>
+        <div class="input-holders">
+            {% block inputUser %}{% endblock %}
+            <div class="inputDiv">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pwd" placeholder="Password">
+            </div>
+            <div class="inputDiv">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+            {% block inputRpwd %}{% endblock %}
+        </div>
+        <!-- {  url } This is used to get the absoute url using the urlName without hard coding the url-->
+        <p>Already have an account  {% block linkOppTag %}{% endblock %}</p>
+
+        <button class="btn" id="submit">{{btnName}}</button>
+    </form>
+    {% else %}
+    <h3 class="error-msg">Oops Something went wrong</h3>
+    <img  class="demo" src="{% static 'images/poster.png' %}" alt="">
+            {% for x in errorProbs %}
+                <p class="error-detail">&times; {{x}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    
+
+
+    
+    <script src="{% static 'js/validation.js'%}" ></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'productStyles/product.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if available %}
+    <a style="color: #FFF" href="{% url 'homePage' %}"><h2 class="header">{{ title }}</h2></a>
+
+    <div class="product-container">
+        <a class="back-text" href="{% url 'homePage' %}">&leftarrow;</a>
+        <h2 class="productTitle">{{ selectedProduct.title }}</h2>
+        <p class="productDesc">{{ selectedProduct.description }}</p>
+    </div>
+    {% else %}
+    <p class="error">Sorry Product cannot be Found</p>
+    {% endif %}
+</body>
+</html>

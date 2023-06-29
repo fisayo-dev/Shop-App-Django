@@ -1,0 +1,136 @@
+@import url('root_variables.css');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+
+
+body {
+    display: grid;
+    /* justify-content: cent; */
+}
+
+.error-msg{
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 5px;
+    background-color: crimson;
+    color: #fff;
+    text-align: center;
+    font-family: 'Nexa Demo' !important;
+}
+
+
+
+
+.header {
+    background-color: var(--major-theme);
+    color: #fff;
+    text-align: center;
+    padding: 2vmin 11vmin;
+}
+
+form {
+    display: grid;
+    gap: 3vmin;
+    text-align: center;
+    margin: 10vmin auto;
+    background-color: #fff;
+    width: 50%;
+    padding: 7vmin 0;
+    box-shadow: 0px 2px 3px 0.5px rgba(98, 113, 121, 0.5);
+    /* border: 2px solid #ccc; */
+    border-radius: 10px;
+}
+
+form h1 {
+    font-size: 6vmin;
+}
+
+
+.input-holders {
+    display: grid;
+}
+
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: var(--btn-color);
+    padding: 10px;
+    color: #fff;
+    width: 35%;
+    font-weight: 900;
+    font-size: 17px;
+    margin: 10px auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+
+.errors {
+    display: grid;
+    margin: 20px 0;
+}
+
+.error-detail {
+    padding: 10px;
+    border-radius: 8px;
+    width: 50%;
+    margin: 5px auto;
+    background-color: rgb(255, 236, 172);
+}
+
+img.demo {
+    width: 25%;
+    margin: auto
+}
+
+.inputDiv {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 60%;
+    padding: 8px 15px;
+    margin: 5px auto;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    counter-increment: input-inc;
+}
+
+input {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin: 5px 0px;
+    width: 100%;
+}
+
+.inputDiv::before {
+    content: counter(input-inc) '. ';
+    opacity: .5
+}
+
+.inputDiv i {
+    font-size: var(--icon-size);
+    color: var(--icon-color)
+}
+
+.error {
+    border: 2.5px solid crimson;
+}
+
+.success {
+    border: 2.5px solid rgb(3, 223, 33) !important;
+}

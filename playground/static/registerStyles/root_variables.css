@@ -1,0 +1,12 @@
+:root {
+    --primary-color: rgb(255, 167, 4);
+    --main-color:  rgb(65, 42, 1);
+    --link-color: rgb(0, 0, 0);
+    --color-theme: rgb(253, 215, 0);
+    --major-theme: rgb(7, 143, 221);
+    --highlight-color: rgb(3, 198, 247);
+    --icon-color: rgb(0, 36, 70);
+    --icon-size: 3.2vmin;
+    --btn-color: rgba(47,46,65,1);
+    
+}

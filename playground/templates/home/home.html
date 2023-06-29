@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'homeStyles/home.css' %}">
+    <title>SHOP App</title>
+</head>
+<body>
+   <!-- <h3>Hello World!</h3>  -->
+   <div class="header">
+    <h1>SHOP App</h1>
+    <div class="list">
+        <a class="link-tag btn" href="../signup">Sign Up</a>
+        <a class="link-tag" href="../login">Log In</a>
+    </div>
+   </div>
+
+   <div class="body">
+    <div class="left">
+        <h2>{{ mainHead }}</h2>
+        <p>{{paragraph_text}}</p>
+
+        <div class="btn-holder">
+            <button class="btn btn-primary"><a href="../learnMore" >Learn More</a></button>
+            <button class="btn btn-secondary"><a href="../signup" >Get Started</a></button>
+        </div>
+    </div>
+    <div class="right">
+        <img src="{% static 'images/shopping vector.svg' %}" alt="">
+    </div>
+   </div>
+
+
+   <div class="facts">
+        <h2>Our Features</h2>
+        <div class="facts-content">
+            <div class="fact">
+                <img src="{% static 'images/fast.svg' %}" alt="">
+                <p>Fast</p>
+            </div>
+            <div class="fact">
+                <img src="{% static 'images/simple.svg' %}" alt="">
+                <p>Simple</p>
+            </div>
+            <div class="fact">
+                <img src="{% static 'images/secure.svg' %}" alt="">
+                <p>Secure</p>
+            </div>
+        </div>
+   </div>
+
+   <div class="products">
+    <h2>Our Products</h2>
+
+    <div class="product-list">
+        {% for product in products_list %}
+          {% include 'includes/product.html' with title=product.title description=product.description slug=product.slug %}
+        {% endfor %}
+    </div>
+   </div>
+</body>
+</html>

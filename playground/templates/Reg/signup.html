@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+    {% block title %}Shop App - SignUp{% endblock %}
+
+        {% block pageHeadTitle%}SignUp{% endblock %}
+            {% block inputUser %}
+            <div class="inputDiv">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            {% endblock %}
+            {% block inputRpwd %}
+            <div class="inputDiv">
+                <i class="fas fa-key"></i>
+                <input type="password" id="rpwd" placeholder="Repeat Password">
+            </div>
+            {% endblock %}
+            
+            {% block linkOppTag %}
+            <a href="{% url 'loginPage' %} ">Login</a>
+            {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+@import url('../registerStyles/root_variables.css');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+
+.error {
+    padding: 20px;
+    background-color: crimson;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.header {
+    background-color: var(--major-theme);
+    color: #fff;
+    text-align: center;
+    padding: 2vmin 11vmin;
+}
+
+
+.product-container {
+    padding: 10vmin;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 6vmin auto;
+    width: 50%;
+}
+.productTitle {
+    font-size: 5vmin;
+}
+.productDesc {
+    padding: 8px 0px;
+}
+
+.back-text {
+    margin: auto; 
+    font-size: 5vmin;
+    text-align: center;
+    width: 100%;
+    padding: 8px 0px;
+    color:#000;
+}
+
+.back-text:hover {
+    color: var(--major-theme);
+    font-weight: 400;
+}

@@ -1,0 +1,10 @@
+<div class="product">
+    <img src="" alt="">
+    <h3 class="title">{{title}}</h3>
+    <p class="desc">{{description}}</p>
+
+    <!-- <a href="{% url 'slugPage' product.slug %}" class="btn">Learn More</a> -->
+    <!-- 'SlugPage is the name of the url' -->
+    <!-- product.slug is the  unique key-->
+    <a href="{% url 'slugPage' slug %}" class="btn">Learn More</a>
+</div>
